@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service · PDF Reader</title>
+<meta name="description" content="The terms for using PDF Reader by HiveCrawl Studio, including Pro subscriptions.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5F5F6;
+    --surface: #FFFFFF;
+    --surface2: #EDEDEF;
+    --text: #0E0E10;
+    --muted: #62626A;
+    --line: #E4E4E7;
+    --primary: #E0312B;
+    --primary-tint: #FDE8E7;
+    --primary-ink: #B3221D;
+    --shadow: 0 1px 2px rgba(14, 14, 16, .04), 0 8px 24px rgba(14, 14, 16, .05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0C0C0E;
+      --surface: #17171A;
+      --surface2: #222226;
+      --text: #F4F4F5;
+      --muted: #9A9AA2;
+      --line: #26262B;
+      --primary: #EF3B36;
+      --primary-tint: #2C1514;
+      --primary-ink: #FF8C87;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0C0C0E;
+    --surface: #17171A;
+    --surface2: #222226;
+    --text: #F4F4F5;
+    --muted: #9A9AA2;
+    --line: #26262B;
+    --primary: #EF3B36;
+    --primary-tint: #2C1514;
+    --primary-ink: #FF8C87;
+    --shadow: none;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 16px/1.65 "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--primary-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--primary); }
+  ::selection { background: var(--primary-tint); }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 56px 0 28px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 36px; }
+  .mark {
+    width: 40px; height: 40px; border-radius: 12px; background: var(--primary);
+    display: grid; place-items: center; flex: none;
+  }
+  .mark svg { width: 22px; height: 22px; }
+  .brand-name { font-weight: 600; font-size: 15px; line-height: 1.2; }
+  .brand-sub { color: var(--muted); font-size: 13px; }
+  .eyebrow {
+    font: 500 12px/1 "Geist Mono", ui-monospace, monospace; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--primary-ink); margin: 0 0 14px;
+  }
+  h1 {
+    font: 500 clamp(34px, 7vw, 48px)/1.1 "Literata", Georgia, serif;
+    letter-spacing: -.02em; margin: 0 0 16px;
+  }
+  .lede { font-size: 18px; color: var(--muted); margin: 0 0 22px; max-width: 600px; }
+  .dates { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font: 500 12px/1 "Geist Mono", ui-monospace, monospace; color: var(--muted);
+    background: var(--surface2); padding: 8px 12px; border-radius: 999px;
+  }
+
+  .glance {
+    background: var(--surface); border-radius: 20px; box-shadow: var(--shadow);
+    padding: 24px; margin: 8px 0 28px; border: 1px solid var(--line);
+  }
+  .glance h2 { margin-top: 0; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+  .point { background: var(--bg); border-radius: 14px; padding: 16px; }
+  .point b { display: block; font-weight: 600; margin-bottom: 2px; }
+  .point span { color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .dot {
+    width: 30px; height: 30px; border-radius: 9px; background: var(--primary-tint);
+    display: grid; place-items: center; margin-bottom: 10px;
+  }
+  .dot svg { width: 17px; height: 17px; stroke: var(--primary-ink); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  nav.toc {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+    padding: 20px 24px; margin-bottom: 28px; box-shadow: var(--shadow);
+  }
+  nav.toc p { margin: 0 0 10px; font-weight: 600; }
+  nav.toc ol {
+    margin: 0; padding: 0; list-style: none; counter-reset: toc;
+    display: grid; grid-template-rows: repeat(8, auto); grid-auto-flow: column; column-gap: 28px;
+  }
+  nav.toc li { counter-increment: toc; padding: 3px 0; margin: 0; font-size: 15px; }
+  nav.toc li::before {
+    content: counter(toc, decimal-leading-zero); font: 500 12px "Geist Mono", ui-monospace, monospace;
+    color: var(--muted); margin-right: 10px;
+  }
+  nav.toc a { color: var(--text); text-decoration: none; }
+  nav.toc a:hover { color: var(--primary-ink); }
+
+  main section {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+    padding: 26px 24px; margin-bottom: 14px; box-shadow: var(--shadow);
+    scroll-margin-top: 16px;
+  }
+  h2 {
+    font: 500 24px/1.25 "Literata", Georgia, serif; letter-spacing: -.01em; margin: 0 0 12px;
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  h2 .n { font: 500 13px "Geist Mono", ui-monospace, monospace; color: var(--primary-ink); }
+  h3 { font-size: 16px; font-weight: 600; margin: 22px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  li::marker { color: var(--primary); }
+  section > :last-child { margin-bottom: 0; }
+
+  .table { overflow-x: auto; margin: 14px 0 4px; border: 1px solid var(--line); border-radius: 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  tr:last-child td { border-bottom: 0; }
+  th { font-weight: 600; background: var(--bg); font-size: 13px; color: var(--muted); }
+  td:first-child { font-weight: 600; white-space: nowrap; }
+  code { font: 13px "Geist Mono", ui-monospace, monospace; background: var(--surface2); padding: 2px 6px; border-radius: 6px; }
+
+  .note {
+    background: var(--primary-tint); color: var(--text); border-radius: 14px;
+    padding: 14px 16px; margin: 14px 0 0; font-size: 15px;
+  }
+  .note b { color: var(--primary-ink); }
+
+  .contact { display: grid; gap: 10px; margin-top: 14px; }
+  .contact div { background: var(--bg); border-radius: 14px; padding: 14px 16px; }
+  .contact small { display: block; color: var(--muted); font-size: 13px; }
+
+  footer { padding: 28px 0 56px; color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--text); }
+  .theme {
+    font: inherit; color: var(--muted); background: var(--surface); border: 1px solid var(--line);
+    border-radius: 999px; padding: 6px 12px; cursor: pointer;
+  }
+  .theme:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    header { padding-top: 32px; }
+    .grid { grid-template-columns: 1fr; }
+    nav.toc ol { grid-template-rows: none; grid-auto-flow: row; }
+    .glance, nav.toc, main section { padding: 20px 18px; border-radius: 18px; }
+    td:first-child { white-space: normal; }
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    .glance, main section { box-shadow: none; border: 0; padding: 0; margin-bottom: 20px; }
+    .theme, nav.toc { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">PDF Reader</div>
+        <div class="brand-sub">by HiveCrawl Studio</div>
+      </div>
+    </div>
+    <p class="eyebrow">Terms of Service</p>
+    <h1>Fair terms for a tool you own.</h1>
+    <p class="lede">These terms explain what you can expect from PDF Reader, how Pro and subscriptions work, and the few things we ask of you. They're written to be read, not skimmed past.</p>
+    <div class="dates">
+      <span class="chip">Effective 21 October 2026</span>
+      <span class="chip">Last updated 21 October 2026</span>
+    </div>
+  </header>
+
+  <div class="glance" aria-labelledby="glance">
+    <h2 id="glance">At a glance</h2>
+    <div class="grid">
+      <div class="point">
+        <div class="dot"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></div>
+        <b>Your files are yours</b>
+        <span>We claim no rights to anything you open, create or edit, and we never see it.</span>
+      </div>
+      <div class="point">
+        <div class="dot"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></div>
+        <b>Cancel any time</b>
+        <span>Subscriptions renew through Google Play until you cancel, and you keep Pro until the period ends.</span>
+      </div>
+      <div class="point">
+        <div class="dot"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+        <b>Keep your own copies</b>
+        <span>The app changes real files. Keep backups of anything important before editing.</span>
+      </div>
+      <div class="point">
+        <div class="dot"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
+        <b>Your consumer rights stay</b>
+        <span>Nothing here takes away rights that consumer law in your country gives you.</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#agreement">Agreeing to these terms</a></li>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#licence">Your licence to use the app</a></li>
+      <li><a href="#content">Your files and content</a></li>
+      <li><a href="#use">Acceptable use</a></li>
+      <li><a href="#pro">Pro, subscriptions and payments</a></li>
+      <li><a href="#third">Google and open-source parts</a></li>
+      <li><a href="#updates">Updates and availability</a></li>
+      <li><a href="#backups">Backups and data loss</a></li>
+      <li><a href="#disclaimer">Disclaimer</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#ending">Ending these terms</a></li>
+      <li><a href="#law">Governing law and disputes</a></li>
+      <li><a href="#changes">Changes to these terms</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="agreement">
+      <h2><span class="n">01</span>Agreeing to these terms</h2>
+      <p>These Terms of Service (“terms”) are an agreement between you and <b>HiveCrawl Studio</b> about your use of the PDF Reader app for Android, its optional Exact view download, and any Pro features (together, “the app”). By installing or using the app, you agree to these terms. If you don't agree, please don't use the app.</p>
+      <p>Our <a href="../privacy/">Privacy Policy</a> explains how the app handles information, and forms part of these terms. When you get the app from Google Play, the <a href="https://play.google.com/about/play-terms/" rel="noopener">Google Play Terms of Service</a> also apply between you and Google.</p>
+      <p>If you use the app on behalf of a company or other organisation, you confirm you're allowed to accept these terms for it.</p>
+    </section>
+
+    <section id="who">
+      <h2><span class="n">02</span>Who we are</h2>
+      <p>PDF Reader (Android package <code>com.hivecrawlstudio.pdfreader</code>) is developed and published by HiveCrawl Studio, an organisation based in India (“we”, “us”, “our”). You can reach us at <a href="mailto:hivecrawlstudio@gmail.com">hivecrawlstudio@gmail.com</a>.</p>
+    </section>
+
+    <section id="licence">
+      <h2><span class="n">03</span>Your licence to use the app</h2>
+      <p>We give you a personal, non-exclusive, non-transferable, revocable licence to install and use the app on Android devices you own or control, for personal use or for your work, in line with these terms and Google Play's rules.</p>
+      <p>The app, its design, code, name, logo and content (other than the open-source parts described in section 07, and your own files) belong to HiveCrawl Studio and are protected by copyright and other laws. Except where the law or an open-source licence allows it, you may not:</p>
+      <ul>
+        <li>copy, sell, rent, sublicense or redistribute the app;</li>
+        <li>decompile, reverse engineer or modify it;</li>
+        <li>remove or bypass its licence checks, Pro limits or security features;</li>
+        <li>use our name or logo in a way that suggests we endorse you.</li>
+      </ul>
+    </section>
+
+    <section id="content">
+      <h2><span class="n">04</span>Your files and content</h2>
+      <p><b>You keep all rights to your files.</b> Documents, scans, signatures, comments and anything else you open, create or edit with the app stay yours. The app works on your phone, and we don't receive, read or claim any licence to your content.</p>
+      <p>You're responsible for your files and how you use them, including:</p>
+      <ul>
+        <li>having the right to open, edit, convert, combine or share each file;</li>
+        <li>checking that edits, conversions, compression and text recognition give the result you need. Converted or recognised text may not match the original exactly;</li>
+        <li>signatures you add. The app places a signature image or typed name on a document; whether that signature is legally valid for a particular purpose depends on the law and on the parties involved, and the app is not a certified electronic or digital signature service;</li>
+        <li>removing passwords or protection only from files you're entitled to unlock.</li>
+      </ul>
+    </section>
+
+    <section id="use">
+      <h2><span class="n">05</span>Acceptable use</h2>
+      <p>Please use the app lawfully and responsibly. You agree not to use it to:</p>
+      <ul>
+        <li>forge, falsify or alter documents to deceive anyone, or sign on someone else's behalf without their permission;</li>
+        <li>infringe copyright or other rights, or remove protection from files you have no right to access;</li>
+        <li>create or share content that is illegal where you live;</li>
+        <li>interfere with the app, Google Play, or anyone else's use of them.</li>
+      </ul>
+    </section>
+
+    <section id="pro">
+      <h2><span class="n">06</span>Pro, subscriptions and payments</h2>
+      <p>The app is free to use. Some features are part of <b>Pro</b>, which you can buy as a subscription or, where offered, a one-time purchase. Prices, billing periods and what's included are shown in the app and on Google Play before you buy.</p>
+      <h3>Payments</h3>
+      <ul>
+        <li>All purchases are processed by Google Play using the payment method in your Google account. We never see your card or bank details.</li>
+        <li>Prices include or exclude taxes as shown by Google Play for your country.</li>
+      </ul>
+      <h3>Subscriptions</h3>
+      <ul>
+        <li><b>Subscriptions renew automatically</b> at the end of each billing period, at the then-current price, until you cancel.</li>
+        <li>You can cancel at any time in the Google Play app under <b>Payments &amp; subscriptions</b>, or at <a href="https://play.google.com/store/account/subscriptions" rel="noopener">play.google.com/store/account/subscriptions</a>. Uninstalling the app does not cancel a subscription.</li>
+        <li>When you cancel, you keep Pro until the end of the period you've already paid for, and you won't be charged again.</li>
+        <li>If we offer a free trial, it becomes a paid subscription when the trial ends unless you cancel before then. Google Play shows the trial length and the date you'll be charged.</li>
+        <li>If we change a subscription's price, Google Play will tell you in advance and, where the law or Google requires it, ask for your agreement before the new price applies.</li>
+      </ul>
+      <h3>Refunds</h3>
+      <p>Refunds are handled by Google Play under <a href="https://support.google.com/googleplay/answer/2479637" rel="noopener">Google Play's refund policies</a>. If you have a problem with a purchase, contact us as well and we'll help where we can. This doesn't affect any refund rights you have under consumer law.</p>
+      <h3>Free uses of Pro tools</h3>
+      <p>Free users may get a limited number of Pro tool uses each week. The number is shown in the app and may change over time. It's counted on your phone and isn't a paid entitlement.</p>
+      <h3>Keeping Pro on a new phone</h3>
+      <p>Pro is linked to the Google account you bought it with. Sign in to Google Play with the same account on your new device and Pro is restored.</p>
+    </section>
+
+    <section id="third">
+      <h2><span class="n">07</span>Google and open-source parts</h2>
+      <p>The app includes open-source software and fonts, such as LibreOffice (in Exact view), PdfBox-Android and several typefaces. Each is used under its own licence, listed with full texts in the app under <b>Settings › Open-source licences</b>. Nothing in these terms limits your rights under those licences.</p>
+      <p>Some features use Google Play services, ML Kit and Google Play Billing, which are provided by Google under Google's own terms. We aren't responsible for services run by Google or for other apps you share files with.</p>
+    </section>
+
+    <section id="updates">
+      <h2><span class="n">08</span>Updates and availability</h2>
+      <p>We work to improve the app and may add, change or remove features over time. Updates may be needed to keep using some features. If we remove a major Pro feature you're paying for, we'll tell you in the app, and you can cancel your subscription.</p>
+      <p>The app may not work on every device, Android version or file. We may stop offering the app, but if we do, we'll give reasonable notice where we can, and files you've saved stay on your phone.</p>
+    </section>
+
+    <section id="backups">
+      <h2><span class="n">09</span>Backups and data loss</h2>
+      <p>PDF Reader edits real files on your phone. Files can be damaged by device faults, storage problems, interrupted saves, or unusual or damaged documents. <b>Please keep copies of important files</b>, and save edits as a copy when the original matters.</p>
+      <p>Because your files never reach us, we can't restore them if they're lost or damaged.</p>
+    </section>
+
+    <section id="disclaimer">
+      <h2><span class="n">10</span>Disclaimer</h2>
+      <p>We build the app with care, but it is provided <b>“as is” and “as available”</b>. To the extent the law allows, we don't promise that the app will be error-free, uninterrupted, or suitable for a particular purpose, or that every file will open, convert or display exactly as in other software.</p>
+      <p>Some countries don't allow these exclusions. Where that's the case, they apply only as far as the law allows, and your statutory rights are not affected.</p>
+    </section>
+
+    <section id="liability">
+      <h2><span class="n">11</span>Limitation of liability</h2>
+      <p>To the extent the law allows, HiveCrawl Studio is not liable for indirect, incidental, special or consequential loss, or for loss of data, documents, profits, business or goodwill, arising from your use of, or inability to use, the app.</p>
+      <p>To the extent the law allows, our total liability to you for any claim about the app is limited to the amount you paid us for Pro in the 12 months before the claim, or ₹1,000 if that's greater.</p>
+      <p>Nothing in these terms limits liability that can't be limited by law, such as for fraud, or for death or personal injury caused by negligence.</p>
+    </section>
+
+    <section id="ending">
+      <h2><span class="n">12</span>Ending these terms</h2>
+      <p>You can stop using the app at any time by uninstalling it. Remember to cancel any subscription in Google Play as well.</p>
+      <p>If you seriously or repeatedly break these terms, we may end your licence to use the app or its Pro features. Sections 04, 09, 10, 11 and 13 continue to apply after these terms end.</p>
+    </section>
+
+    <section id="law">
+      <h2><span class="n">13</span>Governing law and disputes</h2>
+      <p>These terms are governed by the laws of India. Courts at the place of HiveCrawl Studio's registered office in India have jurisdiction over disputes about them.</p>
+      <p>If you live outside India and use the app as a consumer, you also keep the protection of the mandatory consumer laws of your country, and you may bring a claim in your local courts where those laws allow it.</p>
+      <p>Before going to court, please contact us. Most problems can be solved quickly by email, and we'll try in good faith to resolve yours within 30 days.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="n">14</span>Changes to these terms</h2>
+      <p>We may update these terms to reflect changes to the app or the law. We'll update the “Last updated” date above, and for significant changes we'll tell you in the app or on Google Play before they take effect. If you keep using the app after a change takes effect, the new terms apply. If you don't agree, you can stop using the app and cancel any subscription.</p>
+      <p>If any part of these terms can't be enforced, the rest still applies. If we don't enforce a term straight away, we can still enforce it later. These terms, with the Privacy Policy, are the whole agreement between you and us about the app.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="n">15</span>Contact us</h2>
+      <p>Questions about these terms, a purchase, or the app are welcome.</p>
+      <div class="contact">
+        <div><small>Developer</small>HiveCrawl Studio, India</div>
+        <div><small>Email</small><a href="mailto:hivecrawlstudio@gmail.com">hivecrawlstudio@gmail.com</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 HiveCrawl Studio · <a href="../privacy/">Privacy Policy</a> · <a href="./">Terms of Service</a></span>
+    <button class="theme" type="button" id="theme" aria-label="Switch colour theme">Theme: Auto</button>
+  </footer>
+</div>
+<script>
+  (function () {
+    var btn = document.getElementById("theme");
+    var order = ["auto", "light", "dark"];
+    var labels = { auto: "Auto", light: "Light", dark: "Dark" };
+    var mode = "auto";
+    try { mode = localStorage.getItem("pp-theme") || "auto"; } catch (e) {}
+    if (order.indexOf(mode) < 0) mode = "auto";
+    function apply() {
+      if (mode === "auto") document.documentElement.removeAttribute("data-theme");
+      else document.documentElement.setAttribute("data-theme", mode);
+      btn.textContent = "Theme: " + labels[mode];
+    }
+    btn.addEventListener("click", function () {
+      mode = order[(order.indexOf(mode) + 1) % order.length];
+      try { localStorage.setItem("pp-theme", mode); } catch (e) {}
+      apply();
+    });
+    apply();
+  })();
+</script>
+</body>
+</html>

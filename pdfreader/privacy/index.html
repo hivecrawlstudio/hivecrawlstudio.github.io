@@ -130,6 +130,7 @@
     display: flex; align-items: baseline; gap: 12px;
   }
   h2 .n { font: 500 13px "Geist Mono", ui-monospace, monospace; color: var(--primary-ink); }
+  h3 { font-size: 16px; font-weight: 600; margin: 22px 0 6px; }
   p { margin: 0 0 12px; }
   ul { margin: 0 0 12px; padding-left: 20px; }
   li { margin: 4px 0; }
@@ -155,6 +156,8 @@
   .contact small { display: block; color: var(--muted); font-size: 13px; }
 
   footer { padding: 28px 0 56px; color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--text); }
   .theme {
     font: inherit; color: var(--muted); background: var(--surface); border: 1px solid var(--line);
     border-radius: 999px; padding: 6px 12px; cursor: pointer;
@@ -246,7 +249,7 @@
   <main>
     <section id="who">
       <h2><span class="n">01</span>Who we are</h2>
-      <p>PDF Reader (Android package <code>com.hivecrawlstudio.pdfreader</code>) is developed and published by <b>HiveCrawl Studio</b> (“we”, “us”). This policy covers the PDF Reader app and its optional Exact view download. It does not cover other apps or websites, including Google's, which have their own policies.</p>
+      <p>PDF Reader (Android package <code>com.hivecrawlstudio.pdfreader</code>) is developed and published by <b>HiveCrawl Studio</b>, an organisation based in India (“we”, “us”). Using the app is also subject to our <a href="../terms/">Terms of Service</a>. This policy covers the PDF Reader app and its optional Exact view download. It does not cover other apps or websites, including Google's, which have their own policies.</p>
       <p>Where data protection law gives a role of “controller” or “data fiduciary”, that is HiveCrawl Studio for the limited information described here.</p>
     </section>
 
@@ -383,14 +386,14 @@
       <h2><span class="n">15</span>Contact us</h2>
       <p>Questions, requests or concerns about privacy are welcome.</p>
       <div class="contact">
-        <div><small>Developer</small>HiveCrawl Studio</div>
-        <div><small>Email</small><a href="mailto:redtabrez@gmail.com">redtabrez@gmail.com</a></div>
+        <div><small>Developer</small>HiveCrawl Studio, India</div>
+        <div><small>Email</small><a href="mailto:hivecrawlstudio@gmail.com">hivecrawlstudio@gmail.com</a></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <span>© 2026 HiveCrawl Studio. PDF Reader for Android.</span>
+    <span>© 2026 HiveCrawl Studio · <a href="./">Privacy Policy</a> · <a href="../terms/">Terms of Service</a></span>
     <button class="theme" type="button" id="theme" aria-label="Switch colour theme">Theme: Auto</button>
   </footer>
 </div>
