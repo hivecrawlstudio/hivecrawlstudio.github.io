@@ -195,7 +195,7 @@
     <p class="lede">PDF Reader is built to work offline. We don't run servers that receive your documents, we don't ask you to sign in, and we don't track you. This policy explains exactly what the app touches, and the few things Google handles for it.</p>
     <div class="dates">
       <span class="chip">Effective 21 October 2026</span>
-      <span class="chip">Last updated 21 October 2026</span>
+      <span class="chip">Last updated 24 November 2026</span>
     </div>
   </header>
 
@@ -205,7 +205,7 @@
       <div class="point">
         <div class="dot"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
         <b>Processed on your phone</b>
-        <span>Reading, editing, signing, scanning, text recognition and conversions all run on the device.</span>
+        <span>Reading, editing, signing, scanning, text recognition, conversions and AI summaries all run on the device.</span>
       </div>
       <div class="point">
         <div class="dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
@@ -249,7 +249,7 @@
   <main>
     <section id="who">
       <h2><span class="n">01</span>Who we are</h2>
-      <p>PDF Reader (Android package <code>com.hivecrawlstudio.pdfreader</code>) is developed and published by <b>HiveCrawl Studio</b>, an organisation based in India (“we”, “us”). Using the app is also subject to our <a href="../terms/">Terms of Service</a>. This policy covers the PDF Reader app and its optional Exact view download. It does not cover other apps or websites, including Google's, which have their own policies.</p>
+      <p>PDF Reader (Android package <code>com.hivecrawlstudio.pdfreader</code>) is developed and published by <b>HiveCrawl Studio</b>, an organisation based in India (“we”, “us”). Using the app is also subject to our <a href="../terms/">Terms of Service</a>. This policy covers the PDF Reader app and its optional downloads, such as Exact view. It does not cover other apps or websites, including Google's, which have their own policies.</p>
       <p>Where data protection law gives a role of “controller” or “data fiduciary”, that is HiveCrawl Studio for the limited information described here.</p>
     </section>
 
@@ -262,6 +262,7 @@
         <li><b>Search index.</b> Text from your documents, kept on the phone so you can search inside files.</li>
         <li><b>Scans and photos.</b> Pictures you take with the camera to scan documents, and images you add to PDFs.</li>
         <li><b>Recognised text.</b> Text the app reads from scans and images (“Make searchable”), processed on the phone.</li>
+        <li><b>AI summaries and rewrites.</b> Text you ask the app to summarise, rewrite or proofread, processed on the phone by Android's built-in AI model on phones that have one.</li>
         <li><b>Signatures and your name.</b> Signatures and initials you draw or type, and the name you set for comments and signing.</li>
         <li><b>Voice comments.</b> Audio you record with the microphone, saved inside the document you comment on.</li>
         <li><b>Form suggestions.</b> Things you type into PDF forms, offered again next time if you leave this setting on.</li>
@@ -275,6 +276,7 @@
       <p><b>We do not collect personal information.</b> HiveCrawl Studio does not operate any server that the app sends data to. The app has no account system, no analytics, no advertising, no crash-reporting service of our own, and it does not use the Android advertising ID.</p>
       <p>We do not sell, rent or trade personal information, and we do not use it for advertising or profiling.</p>
       <p>If you email us, we receive your email address and whatever you choose to include, such as a description of a problem or a file you attach. We use it only to reply and help you, and delete it when it's no longer needed.</p>
+      <p>After the app stops unexpectedly, it may offer to email us a crash report. When you report an AI result, the app fills in an email with that result. In both cases your email app opens with the text filled in, you can read and change it, and nothing is sent unless you send it yourself. We use these reports only to fix problems and improve the app.</p>
       <p>If you choose to share crash details through Android's or Google Play's feedback tools, or leave a review on Google Play, that information is handled by Google, and we may see it in the Google Play Console as Google allows.</p>
     </section>
 
@@ -287,12 +289,15 @@
           <tbody>
             <tr><td>Google Play Billing</td><td>Buying and managing Pro.</td><td>Your Google account, purchase and subscription details, and payment information. We receive only a purchase confirmation and its status.</td></tr>
             <tr><td>ML Kit (text recognition, subject cut-out)</td><td>Making scans searchable, reading text from images, and cutting subjects out of photos.</td><td>Pages and pictures are processed on your phone and are not sent to Google. Google Play services may download recognition models and may send Google anonymous usage and performance metrics about these features, as described in the <a href="https://developers.google.com/ml-kit/terms" rel="noopener">ML Kit terms</a>.</td></tr>
-            <tr><td>Play Feature Delivery</td><td>Downloading the optional Exact view for Office files.</td><td>Standard download information Google Play needs to deliver the module to your device.</td></tr>
+            <tr><td>ML Kit GenAI (Gemini Nano)</td><td>Summarising pages and selected text, and rewriting or proofreading text you type, on phones that support it.</td><td>The text is processed on your phone by Android AICore and is not sent to Google or to us. Android may download the AI model the first time, and Google Play services may send Google anonymous usage and performance metrics, as described in the <a href="https://developers.google.com/ml-kit/terms" rel="noopener">ML Kit terms</a>.</td></tr>
+            <tr><td>TensorFlow Lite in Google Play services</td><td>Finding page edges, turning pages upright and AI clean in the scanner.</td><td>The models ship inside the app and run on your phone. Pictures are not sent to Google. Google Play services provides the runtime and may send Google anonymous usage and performance metrics about it.</td></tr>
+            <tr><td>Play Feature Delivery</td><td>Downloading the optional Exact view for Office files and extra text-recognition scripts.</td><td>Standard download information Google Play needs to deliver these parts to your device.</td></tr>
+            <tr><td>Play In-App Updates</td><td>Telling you when a new version is available and installing it if you agree.</td><td>The app's version and update status, which Google Play already knows to deliver updates.</td></tr>
             <tr><td>Play In-App Review</td><td>Letting you rate the app without leaving it.</td><td>Your rating and review, which Google shows publicly on Google Play under your Google profile.</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="note"><b>Exact view</b> runs LibreOffice, an open-source engine, entirely on your phone. Office files you open with it are not uploaded anywhere.</p>
+      <p class="note"><b>Exact view</b> runs LibreOffice, an open-source engine, entirely on your phone. Office files you open with it are not uploaded anywhere. The extra text-recognition scripts run Tesseract on your phone in the same way.</p>
     </section>
 
     <section id="permissions">
@@ -306,7 +311,8 @@
             <tr><td>Microphone</td><td>Recording voice comments that you attach to a document. Recording happens only while you record.</td></tr>
             <tr><td>All files access (optional)</td><td>“Scan whole phone”, which finds documents across your storage so they appear in your library. Without it, the app works with files you open or pick yourself. On Android 10 and older, this is the storage read permission.</td></tr>
             <tr><td>Notifications</td><td>Showing progress for longer tasks, such as compressing or converting, and telling you when they're done.</td></tr>
-            <tr><td>Foreground service</td><td>Letting those tasks finish if you leave the app.</td></tr>
+            <tr><td>Foreground service</td><td>Letting those tasks finish, and Read aloud keep playing, if you leave the app.</td></tr>
+            <tr><td>Biometrics (optional)</td><td>App lock, which asks for your fingerprint, face or screen lock when the app opens. Android does the check and only tells the app whether it passed. The app never receives or stores your fingerprint, face or PIN.</td></tr>
             <tr><td>Network state</td><td>Checking for Wi-Fi so the Exact view download doesn't use mobile data unless you ask.</td></tr>
             <tr><td>Internet</td><td>Used by Google Play Billing, Google Play services and ML Kit as described above. The app itself does not send your content online.</td></tr>
           </tbody>
